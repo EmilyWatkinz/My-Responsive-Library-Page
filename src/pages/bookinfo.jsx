@@ -1,18 +1,31 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import Rating from '../components/ui/rating';
 import Price from '../components/ui/price';
 import Book from '../components/ui/book';
+import BookInfoSkeleton from '../components/ui/bookInfoSkeleton';
 
 const BookInfo = ({ books, addToCart, cart }) => {
     const { id } = useParams();
+    const [loading, setLoading] = useState(true);
     const book = books.find(book => +book.id === +id);
     const recommendedBooks = books.filter(b => b.rating === book.rating && b.id !== book.id);
 
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+        }, 500);
+    }, [id]);
+
     function bookInCart() {
         return cart.find(item => item.id === book.id);
+    }
+
+    if (loading) {
+        return <BookInfoSkeleton />;
     }
 
     return (

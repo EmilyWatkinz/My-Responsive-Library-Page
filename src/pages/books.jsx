@@ -1,8 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Book from '../components/ui/book.jsx';
+import BookSkeleton from '../components/ui/bookSkeleton.jsx';
 
 const Books = ({ books, initialBooks }) => {
     const [booksState, setBooks] = useState(initialBooks);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 500);
+    }, []);
     
     function filterBooks(filter) {
         console.log(filter);
@@ -38,9 +46,13 @@ const Books = ({ books, initialBooks }) => {
                             </select>
                         </div>
                         <div className="books">
-                            {booksState.map((book) => (
-                             <Book book={book} key={book.id} />
-                             ))}
+                            {loading ? (
+                                new Array(12).fill(0).map((_, index) => <BookSkeleton key={index} />)
+                            ) : (
+                                booksState.map((book) => (
+                                    <Book book={book} key={book.id} />
+                                ))
+                            )}
                         </div>
                     </div>
                 </div>
