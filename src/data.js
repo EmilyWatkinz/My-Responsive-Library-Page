@@ -7,6 +7,7 @@ export const books = [
     originalPrice: 49.95,
     salePrice: 14.95,
     rating: 4.5,
+    description: "Master the art of technical interviews with 189 programming questions and solutions. Learn essential data structures, algorithms, and problem-solving techniques used by top tech companies.",
   },
   {
     id: 2,
@@ -15,6 +16,7 @@ export const books = [
     originalPrice: 39,
     salePrice: null,
     rating: 5,
+    description: "Transform your life through tiny changes that deliver remarkable results. Discover proven strategies to build good habits, break bad ones, and master the tiny behaviors that lead to extraordinary outcomes.",
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ export const books = [
     originalPrice: 29,
     salePrice: null,
     rating: 5,
+    description: "Follow David Goggins' incredible journey from poverty and abuse to becoming a Navy SEAL and ultra-endurance athlete. Learn to master your mind and defy the odds through mental toughness and self-discipline.",
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ export const books = [
     originalPrice: 44,
     salePrice: 19,
     rating: 4.5,
+    description: "Learn to focus without distraction in an increasingly connected world. Cal Newport presents rules for achieving peak productivity by training your mind to perform cognitively demanding tasks.",
   },
   {
     id: 5,
@@ -39,6 +43,7 @@ export const books = [
     originalPrice: 32,
     salePrice: null,
     rating: 5,
+    description: "Grant Cardone reveals the secret to massive success by setting targets 10 times higher and taking 10 times more action. Break through average thinking and achieve extraordinary results in business and life.",
   },
   {
     id: 6,
@@ -47,6 +52,7 @@ export const books = [
     originalPrice: 70,
     salePrice: 12.5,
     rating: 5,
+    description: "Master the art of persuasion and selling in every area of your life. Whether you're in sales or not, this book teaches essential skills for communicating effectively and getting what you want.",
   },
   {
     id: 7,
@@ -55,6 +61,7 @@ export const books = [
     originalPrice: 11,
     salePrice: 10,
     rating: 4,
+    description: "Challenge conventional wisdom about money and learn what the rich teach their kids about wealth that the poor and middle class do not. Discover the difference between working for money and having money work for you.",
   },
   {
     id: 8,
@@ -63,6 +70,7 @@ export const books = [
     originalPrice: 38,
     salePrice: 17.95,
     rating: 4.5,
+    description: "Understand the four ways people earn money and learn how to move from being an employee or self-employed to becoming a business owner or investor. Transform your financial future with this essential guide.",
   },
   {
     id: 9,
@@ -71,6 +79,7 @@ export const books = [
     originalPrice: 35,
     salePrice: 19.95,
     rating: 4.5,
+    description: "Discover the timeless laws of power used by history's most successful leaders. Learn strategies for gaining influence, protecting yourself, and navigating complex social dynamics in any environment.",
   },
   {
     id: 10,
@@ -79,6 +88,7 @@ export const books = [
     originalPrice: 40,
     salePrice: null,
     rating: 5,
+    description: "Transform your life with a simple five-second decision that can break hesitation and self-doubt. Mel Robbins shares a powerful tool for taking action, building courage, and creating lasting change.",
   },
   {
     id: 11,
@@ -87,6 +97,7 @@ export const books = [
     originalPrice: 30,
     salePrice: 20,
     rating: 5,
+    description: "Dale Carnegie's timeless classic teaches fundamental techniques for handling people, winning them to your way of thinking, and changing people without arousing resentment. Essential skills for personal and professional success.",
   },
   {
     id: 12,
@@ -95,5 +106,6 @@ export const books = [
     originalPrice: 30,
     salePrice: 12.95,
     rating: 4.5,
+    description: "Robert Greene reveals the secrets of the world's greatest masters and shows how you can unlock your potential. Learn the path to mastery through analyzing the lives of historical and contemporary masters.",
   },
 ];
