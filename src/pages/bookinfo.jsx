@@ -6,10 +6,14 @@ import Rating from '../components/ui/rating';
 import Price from '../components/ui/price';
 import Book from '../components/ui/book';
 
-const BookInfo = ({ books }) => {
+const BookInfo = ({ books, addToCart, cart }) => {
     const { id } = useParams();
     const book = books.find(book => +book.id === +id);
     const recommendedBooks = books.filter(b => b.rating === book.rating && b.id !== book.id);
+
+    function bookInCart() {
+        return cart.find(item => item.id === book.id);
+    }
 
     return (
         <div id="books__body">
@@ -41,6 +45,9 @@ const BookInfo = ({ books }) => {
                                 <h3 className="book__summary--title">Summary</h3>
                                 <p className="book__summary--para">{book.description}</p>
                             </div>
+                            <button className="btn" onClick={() => addToCart(book)}>
+                                {bookInCart() ? 'Added to Cart' : 'Add to Cart'}
+                            </button>
                         </div>
                     </div>
                     {recommendedBooks.length > 0 && (
